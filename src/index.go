@@ -7,7 +7,7 @@ import (
 	"github.com/jung-kurt/gofpdf"
 )
 
-var businesPartner = BusinessPartner{SerialNo: "PD100", FullName: "PETER IRUNGU KIMANI", Gender: "Male", MaritalStatus: "Married", Dob: "1972", PinNo: "A003877950Z", CreditLimit: 2000000, DocType: "National ID", DocNo: "13379762", PhoneNo: "0723134499", PostalAddress: "1534 NAIVASHA", PhysicalAddress: "NYONDIA", Email: "N/A", Landmark: "ASANTE CHILDREN HOME", NokName: "MARY WAIRIMU", NokDocType: "National ID", NokDocNo: "26968284", NokPhoneNo: "0726441825", Relationship: "Spouse", NokPhysicalAddress: "ASANTE CHILDREN HOME", IncomeSource: "B", Designation: "", EmployeeNo: "", EmployerName: "", EmployerPhone: "", OfficeLocation: "", BusinessLocation: "ROUNDABOUT", BusinessNature: "CONSTRUCTION/SHOP", MonthlyIncome: 300000, BusinessName: "PEGWA ENTERPRISES"}
+var businesPartner = BusinessPartner{SerialNo: "PD100", FullName: "PETER IRUNGU KIMANI", Gender: "Male", MaritalStatus: "Married", Dob: "1972", PinNo: "A003877950Z", CreditLimit: 2000000, DocType: "National ID", OfficeLocation: "", BusinessLocation: "ROUNDABOUT", BusinessNature: "CONSTRUCTION/SHOP", MonthlyIncome: 300000, BusinessName: "PEGWA ENTERPRISES"}
 var loan = LoanApplicationRequest{
 	LoanApplication: LoanApplication{CustomerId: 1, ProductId: 18, InterestRate: 25, RepaymentPeriod: 6, AmountApplied: 600000, Status: 0, DocDate: time.Now(), CustodyExemption: "N"},
 	Collaterals: []Collateral{
@@ -112,9 +112,9 @@ func GeneratePdf(file2 string) error {
 	pdf.MultiCell(180, 7, fmt.Sprintln(loan.LoanApplication.DocDate), "0", "", true)
 	pdf.Ln(10)
 
-	// pdf.Ln(10)
-	// pdf.CellFormat(10, 20, "Instructions:    ", "0", 0, "TL", false, 0, "")
-	// pdf.Ln(5)
+	pdf.Ln(10)
+	pdf.CellFormat(10, 20, "Instructions:    ", "0", 0, "TL", false, 0, "")
+	pdf.Ln(5)
 	// pdf.MultiCell(180, 7, invoice.Instructions, "0", "", true)
 	// pdf.Ln(10)
 	// Set auto page break to true with a large bottom margin
