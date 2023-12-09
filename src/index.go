@@ -7,12 +7,12 @@ import (
 	"github.com/jung-kurt/gofpdf"
 )
 
-var businesPartner = BusinessPartner{SerialNo: "PD100", FullName: "PETER IRUNGU KIMANI", Gender: "Male", MaritalStatus: "Married", Dob: "1972", PinNo: "A003877950Z", CreditLimit: 2000000, DocType: "National ID", OfficeLocation: "", BusinessLocation: "ROUNDABOUT", BusinessNature: "CONSTRUCTION/SHOP", MonthlyIncome: 300000, BusinessName: "PEGWA ENTERPRISES"}
+var businesPartner = BusinessPartner{SerialNo: "PD100", FullName: "P KIMANI", Gender: "Male", MaritalStatus: "Married", Dob: "1972", DocType: "National ID", MonthlyIncome: 300000, BusinessName: "PEWA ENTERPRISES"}
 var loan = LoanApplicationRequest{
 	LoanApplication: LoanApplication{CustomerId: 1, ProductId: 18, InterestRate: 25, RepaymentPeriod: 6, AmountApplied: 600000, Status: 0, DocDate: time.Now(), CustodyExemption: "N"},
 	Collaterals: []Collateral{
-		{ApplicationId: 55, CustomerId: 1, RefNo: "200081200963", AssetDesc: "KAN 366Z", AssetCategory: "Log Book", AssetLocation: "MILIMANI OPPOSITE", IsCharged: "Yes", Chargee: "NTSA", Landmark: "MILIMANI OPPOSITE", AppraisalValue: 200000, AssetId: "n/a"},
-		{ApplicationId: 55, CustomerId: 1, RefNo: "300081200963", AssetDesc: "KCD 366Z", AssetCategory: "Log Book", AssetLocation: "MILIMANI OPPOSITE", IsCharged: "Yes", Chargee: "NTSA", Landmark: "MILIMANI OPPOSITE", AppraisalValue: 1000000, AssetId: "n/a"},
+		{ApplicationId: 55, CustomerId: 1, RefNo: "200081200963", AssetDesc: "KfN 366Z", AssetCategory: "Log Book", AssetLocation: "MILIMANI OPPOSITE", AppraisalValue: 200000, AssetId: "n/a"},
+		{ApplicationId: 55, CustomerId: 1, RefNo: "300081200963", AssetDesc: "KCD 366Z", AssetCategory: "Log Book", AppraisalValue: 1000000, AssetId: "n/a"},
 	},
 }
 
