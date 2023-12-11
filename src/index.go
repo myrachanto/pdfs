@@ -29,11 +29,11 @@ func GeneratePdf(file2 string) error {
 		pdf.CellFormat(190, 10, "Vamos", "0", 0, "C", false, 0, "")
 	})
 	pdf.ImageOptions(
-		"public/logo.jpg",
+		"public/logo.png",
 		10, 20,
 		80, 50,
 		false,
-		gofpdf.ImageOptions{ImageType: "JPG", ReadDpi: false},
+		gofpdf.ImageOptions{ImageType: "PNG", ReadDpi: false},
 		0,
 		"",
 	)
@@ -46,11 +46,11 @@ func GeneratePdf(file2 string) error {
 		// Add content to the footer
 		pdf.CellFormat(190, 10, "This is a computer generated Invoice and as such does not have a signature.", "0", 0, "C", false, 0, "")
 		pdf.Ln(5)
-		pdf.CellFormat(190, 10, "Stalis pos", "0", 0, "C", false, 0, "")
+		pdf.CellFormat(190, 10, "Chantosweb Developers", "0", 0, "C", false, 0, "")
 	})
 	pdf.SetFont("Arial", "B", 8)
 	pdf.SetFillColor(211, 211, 211)
-	pdf.CellFormat(190, 7, "Stalis Pos", "0", 0, "CM", false, 0, "")
+	pdf.CellFormat(190, 7, "Chantosweb Developers", "0", 0, "CM", false, 0, "")
 	// pdf.Image("public/imgs/business/acer.jpg",20, 30,40, 40,false, "", 0, "")
 	pdf.Ln(10)
 	//header one
